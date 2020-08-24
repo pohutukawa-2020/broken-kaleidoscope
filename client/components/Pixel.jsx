@@ -83,7 +83,7 @@ class Pixel extends React.Component {
   //     }
   //   })
   // }, 2000);
-
+  
   render() {
     return (
       <div 
