@@ -9,8 +9,8 @@ class Pixel extends React.Component {
 
     this.state = {
       style: {
-        height: '20px',
-        width: '20px',
+        height: '50px',
+        width: '50px',
         backgroundColor: randomHexColor()
       }
     }
