@@ -1,9 +1,25 @@
-import React from 'react'
+import React from "react"
+import Pixel from "./Pixel.jsx"
 
-const App = () => {
-  return (
-    <div>React development has begun!</div>
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+      </>
+    )
+  }
 }
 
 export default App
