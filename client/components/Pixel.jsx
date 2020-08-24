@@ -9,31 +9,31 @@ class Pixel extends React.Component {
 
     this.state = {
       style: {
-        height: '3px',
-        width: '3px',
+        height: '40px',
+        width: '40px',
         backgroundColor: randomHexColor()
       }
     }
   }
 
-  clickHandler = (event) => {
+  clickHandler = evt => {
     const randomHexColor = () =>
     `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '40px',
+        width: '40px',
         backgroundColor: randomHexColor()
       }
     })
   }
 
-  hoverHandler = (event) => {
+  hoverHandler = evt => {
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '40px',
+        width: '40px',
         backgroundColor: 'green'
       }
     })
@@ -44,32 +44,45 @@ class Pixel extends React.Component {
 
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '40px',
+        width: '40px',
         backgroundColor: 'black'
       }
     })
   }
 
-  doubleClickHandler = (event) => {
+  doubleClickHandler = evt => {
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '40px',
+        width: '40px',
         backgroundColor: 'white'
       }
     })
   }
 
-  dragHandler = (event) => {
+  dragHandler = evt => {
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '40px',
+        width: '40px',
         backgroundColor: 'yellow'
       }
     })
   }
+
+  // setInterval(() => {
+  //   const randomHexColor = () =>
+  //   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+
+  //   this.setState({
+  //     style: {
+  //       height: '40px',
+  //       width: '40px',
+  //       backgroundColor: randomHexColor()
+  //     }
+  //   })
+  // }, 2000);
 
   render() {
     return (
