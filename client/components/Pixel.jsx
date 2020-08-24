@@ -76,7 +76,7 @@ class Pixel extends React.Component {
       <div 
       style={this.state.style} 
       onClick={this.clickHandler} 
-      onMouseEnter={this.hoverHandler} 
+      // onMouseEnter={this.hoverHandler} 
       onContextMenu={this.rightClickHandler} 
       onDoubleClick={this.doubleClickHandler}
       onDragEnter={this.dragHandler}></div>
