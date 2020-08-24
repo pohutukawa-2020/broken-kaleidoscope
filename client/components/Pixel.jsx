@@ -16,11 +16,19 @@ class Pixel extends React.Component {       // React.Component is a superclass o
         }
     }
 
+    clickHandler = (evt) => {
+        this.setState({
+            style: {
+                width: '50px',
+                height: '50px',
+                backgroundColor: randomHexColor()
+            }
+        })
+    }
+
     render () {
         return (
-            <div style={this.state.style}>
-
-            </div>
+            <div style={this.state.style} onClick={this.clickHandler}></div>
         )
     }
 }
