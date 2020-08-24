@@ -1,14 +1,17 @@
 import React from 'react'
 
-class Pixel extends React.Component {
-    constructor (props) {
-        super(props)
+const randomHexColor = () =>
+  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
-        this.state = {
+class Pixel extends React.Component {       // React.Component is a superclass of Pixel so it needs constructor() and super()
+    constructor (props) {                   // 
+        super(props)                        // passes props into the React.Component constructor?
+
+        this.state = {                      // Allows us to make our component dynamic
             style: {
                 width: '50px',
                 height: '50px',
-                backgroundColor: 'pink'
+                backgroundColor: randomHexColor()
             }
         }
     }
