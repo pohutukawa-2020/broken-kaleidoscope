@@ -4,7 +4,8 @@ class App extends React.Component {
 
     render() {
       return(
-        <div><p>hello!</p></div>
+        <div style={{height: '50px', width: '50px', backgroundColor: 'pink'
+        }}></div>
       )
     }
 }
