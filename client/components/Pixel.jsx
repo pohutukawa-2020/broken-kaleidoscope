@@ -16,7 +16,7 @@ class Pixel extends React.Component {
     this.setState({
       // ... update style here ...
       style: {
-      backgroundColor: this.state.backgroundColor      
+      backgroundColor: randomHexColor(),
     }
   })
 }
