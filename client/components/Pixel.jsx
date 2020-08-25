@@ -3,14 +3,17 @@ import React from 'react'
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
+const width = 10
+const height = 10
+
 class Pixel extends React.Component {       // React.Component is a superclass of Pixel so it needs constructor() and super()
     constructor (props) {                   // 
         super(props)                        // passes props into the React.Component constructor?
 
         this.state = {                      // Allows us to make our component dynamic
             style: {
-                width: '50px',
-                height: '50px',
+                width,
+                height,
                 backgroundColor: randomHexColor()
             }
         }
@@ -19,8 +22,8 @@ class Pixel extends React.Component {       // React.Component is a superclass o
     clickHandler = (evt) => {               // event handler function 
         this.setState({                 // same as function (evt) { this.setState... }
             style: {
-                width: '50px',
-                height: '50px',
+                width: width,           // trying out width: width vs just width below
+                height: height,
                 backgroundColor: randomHexColor()
             }
         })
@@ -29,8 +32,8 @@ class Pixel extends React.Component {       // React.Component is a superclass o
     onMouseEnter = (evt) => {
         this.setState({
             style: {
-                width: '50px',
-                height: '50px',
+                width,
+                height,
                 backgroundColor: 'green'        // green needs to be in quotation marks
             }
         })
@@ -40,8 +43,8 @@ class Pixel extends React.Component {       // React.Component is a superclass o
         evt.preventDefault()
         this.setState({
             style: {
-                width: '50px',
-                height: '50px',
+                width,
+                height,
                 backgroundColor: 'black'
             }
         })
@@ -50,8 +53,8 @@ class Pixel extends React.Component {       // React.Component is a superclass o
     onDoubleClick = (evt) => {
         this.setState({
             style: {
-                width: '50px',
-                height: '50px',
+                width,
+                height,
                 backgroundColor: 'white'
             }
         })
@@ -60,8 +63,8 @@ class Pixel extends React.Component {       // React.Component is a superclass o
     onDragEnter = (evt) => {
         this.setState({
             style: {
-                width: '50px',
-                height: '50px',
+                width,
+                height,
                 backgroundColor: 'yellow'
             }
         })
