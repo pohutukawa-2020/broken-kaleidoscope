@@ -3,22 +3,7 @@ import Pixel from "./Pixel.jsx"
 
 class App extends React.Component {
   render() {
-    return (
-      <>
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-      </>
-    )
+    return <>{Array.from(Array(1000), () => Array(1000).fill(<Pixel />))}</>
   }
 }
 
