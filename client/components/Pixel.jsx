@@ -9,25 +9,43 @@ class Pixel extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			style: {
-				height: '100px',
-				width: '100px',
-				backgroundColor: randomHexColor(),
-			},
+			height: '100px',
+			width: '100px',
+			backgroundColor: randomHexColor(),
 		};
 	}
 	clickHandler = (evt) => {
 		this.setState({
-			style: {
-				backgroundColor: randomHexColor(),
-			},
+			backgroundColor: randomHexColor(),
+		});
+	};
+	onDoubleClick = () => {
+		this.setState({
+			backgroundColor: 'white',
+		});
+	};
+	onContextMenu = (evt) => {
+		evt.preventDefault();
+		this.setState({
+			backgroundColor: 'black',
+		});
+	};
+	onDragEnter = () => {
+		this.setState({
+			backgroundColor: 'yellow',
 		});
 	};
 
 	render() {
 		return (
 			<>
-				<div style={this.state.style} onClick={this.clickHandler}></div>
+				<div
+					style={this.state}
+					onClick={this.clickHandler}
+					onDoubleClick={this.onDoubleClick}
+					onContextMenu={this.onContextMenu}
+					onDragEnter={this.onDragEnter}
+				></div>
 			</>
 		);
 	}
