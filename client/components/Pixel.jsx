@@ -47,12 +47,34 @@ class Pixel extends React.Component {       // React.Component is a superclass o
         })
     }
 
+    onDoubleClick = (evt) => {
+        this.setState({
+            style: {
+                width: '50px',
+                height: '50px',
+                backgroundColor: 'white'
+            }
+        })
+    }
+
+    onDragEnter = (evt) => {
+        this.setState({
+            style: {
+                width: '50px',
+                height: '50px',
+                backgroundColor: 'yellow'
+            }
+        })
+    }
+
     render () {                                 // call function like this.clickHandler not this.clickHandler()
         return (                                // if parentheses are used it will fire the event as soon as the DOM loads (not ideal)
             <div style={this.state.style} 
             onClick={this.clickHandler} 
             onMouseEnter={this.onMouseEnter}
-            onContextMenu={this.onContextMenu}>      
+            onContextMenu={this.onContextMenu}
+            onDoubleClick={this.onDoubleClick}
+            draggable='true' onDragEnter={this.onDragEnter}>      
             </div>
         )
     }
