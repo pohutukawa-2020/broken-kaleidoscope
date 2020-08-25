@@ -2,29 +2,15 @@ import React from 'react'
 
 import Pixel from './Pixel'
 
-const App = () => {
+const App = () => {           // using an array of components
   return (
-    <>
-    <div>React development has begun!</div>
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-
-
-    </>
+    [
+      <Pixel />,
+      <Pixel />,
+      <Pixel />,
+      <Pixel />,
+      <Pixel />
+    ]
   )
 }
 
