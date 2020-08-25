@@ -16,8 +16,8 @@ class Pixel extends React.Component {       // React.Component is a superclass o
         }
     }
 
-    clickHandler = (evt) => {
-        this.setState({
+    clickHandler = (evt) => {               // event handler function 
+        this.setState({                 // same as function (evt) { this.setState... }
             style: {
                 width: '50px',
                 height: '50px',
@@ -26,9 +26,34 @@ class Pixel extends React.Component {       // React.Component is a superclass o
         })
     }
 
-    render () {
-        return (
-            <div style={this.state.style} onClick={this.clickHandler}></div>
+    onMouseEnter = (evt) => {
+        this.setState({
+            style: {
+                width: '50px',
+                height: '50px',
+                backgroundColor: 'green'        // green needs to be in quotation marks
+            }
+        })
+    }
+
+    onContextMenu = (evt) => {
+        evt.preventDefault()
+        this.setState({
+            style: {
+                width: '50px',
+                height: '50px',
+                backgroundColor: 'black'
+            }
+        })
+    }
+
+    render () {                                 // call function like this.clickHandler not this.clickHandler()
+        return (                                // if parentheses are used it will fire the event as soon as the DOM loads (not ideal)
+            <div style={this.state.style} 
+            onClick={this.clickHandler} 
+            onMouseEnter={this.onMouseEnter}
+            onContextMenu={this.onContextMenu}>      
+            </div>
         )
     }
 }
