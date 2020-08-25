@@ -6,7 +6,11 @@ const App = () => {
 	return (
 		<>
 			<div>Kaleidoscope</div>
-			<Pixel />
+			<Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel />{' '}
+			<Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel />{' '}
+			<Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel />{' '}
+			<Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel />{' '}
+			<Pixel /> <Pixel /> <Pixel /> <Pixel />
 		</>
 	);
 };
